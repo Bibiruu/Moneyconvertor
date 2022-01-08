@@ -1,0 +1,35 @@
+<!DOCTYPE html> <!--This tells the browser that we are using HTML 5 version-->
+<html>
+<head>
+<title>USD to EUR Convertor</title>
+<script>
+function usdeur()
+{
+var amt=parseInt(document.getElementById("txtamt").value)
+amt=amt*0.82
+document.getElementById("output").innerText=amt 
+}
+function eurusd()
+{
+var amt=parseInt(document.getElementById("txtamt").value)
+amt=amt*1.22
+document.getElementById("output").innerText=amt
+}
+
+</script>
+</head>
+
+<body>
+<H1>
+Valuuttalaskin
+</H1>
+<form>
+Amount <input type="text" id="txtamt"><br>
+<input type="button" id="btnusd" value="EUR->USD" onclick="eurusd()"><input type="button" id="btneur" value="USD->EUR" onclick="usdeur()">
+</form>
+
+<p id="output"></p>
+
+</body>
+
+</html>
